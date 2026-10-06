@@ -9,7 +9,9 @@ import { test, expect } from '@playwright/test';
 
    let allTexts =  await page.locator("//div[@data-cy='title-recipe']//h2/span").allTextContents();
     let mobilePriceJson = {};
- for(let index = 0; index < allTexts.length ; index++){
+
+ for(let index in allTexts){    
+// for(let index = 0; index < allTexts.length ; index++){
         try{
             let xpath = "(//span[text()='"+allTexts[index]+"']/ancestor::div[contains(@class,'a-section')])[1]//span[@class='a-price-whole']";
             let amountArray = await page.locator(xpath).allTextContents();
