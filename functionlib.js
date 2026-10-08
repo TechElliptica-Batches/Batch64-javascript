@@ -1,5 +1,3 @@
-import { starWala, hashWala, percentWala } from "./functionlib.js";
-
 export const starWala =  (data) => {
     console.log("**********************")
     console.log(data);
@@ -15,12 +13,3 @@ export let percentWala = (data) => {
     console.log(data);
     console.log("%%%%%%%%%%%%%%%%%%%%%")
 }
-
-function printMyName(myName, a){
-    a(myName);
-}
-printMyName("Vaibhav", hashWala)
-printMyName("Neeta", starWala)
-printMyName("Abhilekha", percentWala)
-
-
